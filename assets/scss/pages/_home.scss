@@ -1,0 +1,206 @@
+article.main{
+    h1{
+        grid-area: row-2-start/row-2-end;
+    }
+    p{
+        grid-area: row-3-start/row-3-end;
+    }
+    img{
+        grid-area: row-1-start/row-1-end;
+    }
+    footer.section-footer{
+        grid-area: row-4-start/row-4-end;
+    }
+    display: grid;
+    grid-template-rows: 13rem auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "row-1"
+    "row-2"
+    "row-3"
+    "row-4";
+    
+    padding: 24px;
+    border: 1px solid $stroke-muted;
+    border-radius: 5px;
+   img.article-thumb{
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+   }
+   h1{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+   }
+   p{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: $text-muted;
+    padding-top: 10px;
+   }
+   footer.section-footer{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    >*:nth-child(2){
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+    }
+    >*:not(:first-child){
+        padding-left: 5px;
+    }
+    >*:nth-child(4){
+        color: $text-muted;
+    }
+    >*:last-child{
+        display: none;
+    }
+   }
+}
+
+.artc-advert{
+    background-color: $color-secondary;
+    padding: 36px 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    h1{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    p{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        // color: v(grey-400);
+        padding-top: 10px;
+    }
+
+    .buttoncta{
+        font-size: 14px;
+        line-height: 17px;
+        padding: 16px 21px;
+        border-radius: 5px;
+        margin-top: 24px;
+    }
+    
+    .btn-dk{
+        font-weight: 700;
+        background-color: black;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-clearondk{
+        font-weight: 400;
+        color: black;
+    }
+    .btn-ico{
+        // height: 24px;
+        // width: 24px;
+        
+    }
+
+}
+
+.pagination-nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 26px;
+    li{
+        a{
+            font-size: 14px;
+            color: black;
+            svg{
+                height: 100%;
+                width: 100%;
+            }
+            &:hover{
+                background-color: #333;
+                color: white;
+            }
+        }
+    }
+    .pag-navbx{
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+    .active{
+        background-color: black;
+        color:white;
+    }
+    .left-navar,.right-navar{
+        padding: 0;
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+    }
+}
+
+.newsletter{
+    background-color: black;
+    color: white;
+    padding: 36px 36px 0px 36px;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    h1{
+        font-size: 20px;
+        font-weight: 700;
+        
+    }
+    p{  
+        font-size: 16px;
+        font-weight: 300;
+        color: $text-muted-dark;
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+    input{
+        padding: 16px 24px;
+        margin-bottom: 42px;
+        width: 92%;
+    }
+    img{
+        width: 100%;
+        padding-bottom: 0px;
+        border-radius: 5px 5px 0 0;
+    }
+}
+////////////////////===============FOOTER==================///////////////////////
+footer#site-footer{
+    background-color: $color-secondary;
+    color: black;
+    text-align: center;
+    .site-footer-wrapper{
+        padding-top: 110px;
+        .navbar__logo a{
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .copyright{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 43px 10px;
+        }
+        .socials{
+            padding: 0px 0 30px;
+            a{
+                color: black;
+                font-size: 16px;
+            }
+            >*:nth-child(2){
+                padding-left: 10px;
+            }
+        }
+    }
+}
