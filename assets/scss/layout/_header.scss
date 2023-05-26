@@ -116,7 +116,7 @@ header#site-header{
             }
         }
 
-        @include for-tablet-portrait-up{
+        @include for-tablet-landscape-up{
             background: transparent;
             flex-direction: row;
             max-height: 100px;
@@ -149,7 +149,7 @@ header#site-header{
         max-height: 300px;
     }
     &-menuicon{
-        @include flex-center;
+        // @include flex-center;
 
         .navbar__nav-menu{
             height: 24px;

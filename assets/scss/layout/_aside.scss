@@ -1,3 +1,14 @@
 aside{
-    display: none;
+ 
+    // display: none;
+}
+
+.left-sidebar{
+    .socials-aside{
+        li{
+            a{
+                @include flex-center-vertical;
+            }
+        }
+    }
 }

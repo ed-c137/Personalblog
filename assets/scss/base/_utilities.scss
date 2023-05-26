@@ -82,25 +82,74 @@ $allcolors: (
 //       }
 // }
 
+///////==================IMP UTILITIES THAT SHOULD STAY THE SAME FOR ALL PROJECTS==================//////
+.d-block{
+    display: block !important;
+}
 
-.d-none-sm { 
-    @include for-phone-only{
+.d-none{
+    display: none !important;
+}
+@include for-phone-only{
+    .d-sm-block {
+        display: block !important;
+    }
+    .d-sm-none { 
         display: none !important;
     }
  }
 
- .d-none-md{
-    @include for-tablet-portrait-up{
+ @include for-tablet-portrait-only{
+    .d-md-block {
+        display: block !important;
+    }
+    .d-md-none{
         display: none !important;
     }
  }
 
+ @include for-tablet-landscape-only{
+    .d-lg-block {
+        display: block !important;
+    }
+    .d-lg-none{
+        display: none !important;
+    }
+ }
+
+ @include for-desktop-only{
+    .d-xl-block {
+        display: block !important;
+    }
+    .d-xl-none{
+        display: none !important;
+    }
+ }
+///////+++++++++++++++++++IMP UTILITIES THAT SHOULD STAY THE SAME FOR ALL PROJECTS+++++++++++++++//////
  .container{
     padding: 0 20px;
  }
 
+ .d-grid{
+    display: grid !important;
+ }
+
  .d-flex{
-    display: flex;
+    display: flex !important;
+ }
+
+ .d-inline-b{
+    display: inline-block;
+ }
+ .d-block{
+    display: block;
+ }
+ .d-float-right{
+    float: right;
+ }
+
+ .d-float-left{
+    float:left;
  }
 
  .pad-item-1{
@@ -113,3 +162,49 @@ $allcolors: (
         padding-left: 10px;
     }
  }
+
+ .clearfix{
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+ }
+////////////////////===========WEBSITE CUSTOM=================////////////////////
+ .bg-primary{
+    background-color: cornflowerblue;
+ }
+
+.shadow-xs	{
+    box-shadow: var(--shadow-xs);
+}
+.shadow-sm{
+    box-shadow: var(--shadow-sm);
+}	
+.shadow-md{
+    box-shadow: var(--shadow-md);
+}	
+.shadow-lg{
+    box-shadow: var(--shadow-lg);
+}
+.shadow-xl{
+    box-shadow: var(--shadow-xl);
+}	
+.shadow-none{
+    box-shadow: none;
+}	
+
+.btn{
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  @include fontSmooth;
+  transition: all 0.2s ease;
+//   will-change: transform;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+
+}
